@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX Aula 25-09</title>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        section {
+            margin: auto;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: white;
+            width: 450px;
+        }
+        p {
+            margin: auto;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+        #resultado {
+            width: 200px;
+        }
+        input#botao {
+            margin: 10px;
+        }
+        footer {
+            margin: 10px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercício Aula 25/09</h1>
+    </header>
+    <section>
+        <h2>Dias do Mês</h2>        
+        <p>Informe um numero entre 1 a 12, referente aos meses do ano, para verificar quantos dias o mês informado tem:</p>
+        <input type="number" name="mes" id="mes" placeholder="(1 a 12)"> <br>
+        <input type="button" value="Conferir" onclick="conferir()" id="botao"> <br>
+        <p id="resultado"></p>
+    </section>
+    <footer>Aluno: Julio C. S. Junior - Des. Sistemas SENAI - São José SC - 2024 <br> Lógica de Programação / JavaScript <br> Professor: Ruan Lopes / Wesley Vargas</footer>
+    <script>
+        
+        let mes = document.querySelector('input#mes')
+        let res = document.querySelector('p#resultado')
+
+        function conferir() {
+            let diasMes = ''
+            if(mes.value >= 1 && mes.value <= 12){
+                switch(Number(mes.value)){
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                    case 12:
+                        diasMes = '31 dias'
+                        break
+                    case 2: 
+                        diasMes = '28'
+                        break
+                    case 4:
+                    case 6:
+                    case 9:
+                    case 11:
+                        diasMes = '30 dias'
+                    default: 
+                        'Mês invalido!'
+                }
+                
+                res.innerHTML = `O mês correspondete ao numero ${mes.value} possui <strong>${diasMes}</strong>.`
+                mes.value = ''
+                mes.focus()
+            } else {
+                res.innerHTML = ''
+                window.alert('[ERRO!] Infome um valor entre 1 e 12...')
+            }
+        }
+    </script>
+</body>
+</html>

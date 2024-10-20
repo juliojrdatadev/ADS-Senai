@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX 05 Ecommerce</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>E-Commerce</h1>
+    </header>
+    <section id="sect">
+        <p>Informe o valor da sua compra: <input type="number" id="compra" placeholder="Valor da compra"></p>
+        <form id="assinatura">
+            <label>
+                <span id="prem"><input type="radio" name="assinatura" value="premium" id="premium" >Ass. Premium</span>
+            </label>
+         
+            <label>
+                <span id="gold"><input type="radio" name="assinatura" value="gold" id="gold">Ass. Gold</span>  
+            </label>            
+         
+            <label>
+                <span id="silv"><input type="radio" name="assinatura" value="silver" id="silver">Ass. Silver</span>  
+            </label>            
+         
+            <label>
+                <span id="nass"><input type="radio" name="assinatura" value="nass" id="nass">Não Assinante</span>  
+            </label>
+            <br>
+            <br>
+            <input type="button" value="Finalizar" onclick="finalizar()">
+            <p id="retorno"></p>  
+            <br>
+            <input type="button" value="Calcular Novamente" onclick="novoCalculo()"> </p>         
+        </form>
+    </section>
+    <footer>
+        Aluno: Julio C. S. Junior - Des. Sistemas SENAI - São José SC - 2024 <br> Lógica de Programação / JavaScript <br> Professor: Ruan Lopes / Wesley Vargas
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>

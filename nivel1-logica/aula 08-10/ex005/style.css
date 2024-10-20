@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #ffcb05;
+    background-image: url('./fredbg.png');
+    background-position: right;
+    background-size: auto;
+    background-repeat: no-repeat;
+    height: 90vh;
+    width: 98vw;
+}
+main{
+    position: absolute;
+    background-color: #ffffff;
+    width: 350px;
+    height: 500px;
+    border-radius: 20px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+
+}
+div#topo {
+    position: relative;
+    background-image: url('./spotfy-logo2.png');
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+    width: 330px;
+    height: 120px;
+    left: 50%;
+    transform: translate(-50%);
+    margin-top: -10px;
+}
+div#corpo {
+    position: relative;
+    background-color: rgb(252, 255, 205);
+    width: 330px;
+    height: 370px;
+    border-radius: 20px;
+    bottom: 10px;
+    margin-top: -5px;
+    padding-top: 2px;
+    padding-left: 5px;
+    left: 50%;
+    transform: translate(-50%);
+}
+
+h3 {
+    color: #a52a2a;
+    font-size: 1em;
+    margin-top: -1px;
+    text-align: center;
+    margin-top: 5px;
+}
+
+h4 {
+    color: brown;
+    font-size: 0.8em;
+    margin-top: -1px;
+    text-align: center;
+}
+
+p#resultado {
+    font-size: 0.9em;
+}
+
+p#duracao {
+    position: inherit;
+    margin: 10px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.75em;
+    position: relative;
+}

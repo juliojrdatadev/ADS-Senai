@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RuanBank</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header> <!-- login e cadastro -->
+        <h1 id="titulo">RuanBank</h1>
+        <div id="topo">
+            <div id="login">
+                <h4>BEM VINDO AO SEU INTERNET BANKING</h4>
+                <p>Informe sua conta: <input type="number" name="conta" id="conta"></p>
+                <p>Informe sua senha: <input type="number" name="senha" id="senha"></p>
+                <input type="button" value="Acessar" onclick="acessar()">
+                <input type="button" value="Nova Conta" onclick="novaconta()">
+                <p id="retorno"></p>
+            </div>
+    </header>
+
+    <!-- tela de cadastro -->
+    <div id="cadastro">
+        <div id="formulario">
+            <h4>CADASTRO DE CONTA:</h4>
+            <p>Informe uma conta: <input type="number" name="cadconta" id="cadconta" placeholder="4 a 6 digitos numericos" minlength="4" maxlength="6"></p>
+            <p>Informe uma senha: <input type="number" name="cadsenha" id="cadsenha" placeholder="4 a 6 digitos numericos" minlength="4" maxlength="6"></p>
+            <p>Confirme a senha: <input type="number" name="confsenha" id="confsenha" placeholder="4 a 6 digitos numericos" minlength="4" maxlength="6"></p>
+            <p>Informe seu nome: <input type="text" name="cadnome" id="cadnome" placeholder="Seu nome"></p>
+            <p>Informe seu CPF: <input type="text" name="cadcpf" id="cadcpf" placeholder="Seu CPF" minlength="6" maxlength="11"></p>
+
+
+            <input type="button" value="Cadastrar" onclick="cadastrar()">
+            <input id="sair" type="button" value="Cancelar" onclick="sair()">
+            <p id="retorno"></p>
+        </div>
+    </div>
+
+    
+    <div id="corpo" style="display: none;">
+        <h2 id="saldo">SALDO</h2>
+
+        <form id="form">
+            <label>
+                <span id="dep"><input type="radio" name="movimento" value="depositar" id="depositar" checked>Depositar</span>
+            </label>
+            
+            <label>
+                <span id="saq"><input type="radio" name="movimento" value="sacar" id="sacar">Sacar</span>  
+            </label>
+        
+            <input type="number" id="movimento" placeholder="VALOR R$">
+                   
+        </form>
+        <br>
+        <input type="button" value="Confirmar" onclick="movimentar()">
+        <input id="sair" type="button" value="Sair da Conta" onclick="sair()">
+        
+    </div>
+
+    <footer>Aluno: Julio C. S. Junior - Des. Sistemas SENAI - São José SC - 2024 <br> Lógica de Programação / JavaScript <br> Professor: Ruan Lopes / Wesley Vargas</footer>
+    <script src="script.js"></script>    
+</body>
+</html>

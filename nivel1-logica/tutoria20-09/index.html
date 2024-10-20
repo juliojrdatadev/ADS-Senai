@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EX Tutoria 20-09</title>
+    <style>
+        body {
+            background-color: lightgray;
+            font-family: Arial, Helvetica, sans-serif;
+            text-align: center;
+        }
+        section {
+            margin: auto;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: white;
+            width: 450px;
+        }
+        p {
+            margin: auto;
+            margin-bottom: 10px;
+            width: 300px;
+        }
+        #resultado {
+            width: 200px;
+        }
+        input#botao {
+            margin: 10px;
+        }
+        footer {
+            margin: 10px;
+            font-size: 0.8em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Exercício Tutoria 20/09</h1>
+    </header>
+    <section>
+        <h2>Meses do Ano</h2>        
+        <p>Informe um valor de 1 a 12 para verificar a qual mês é correspondente:</p>
+        <input type="number" name="mes" id="mes" placeholder="(1 a 12)"> <br>
+        <input type="button" value="Conferir" onclick="conferir()" id="botao"> <br>
+        <p id="resultado"></p>
+    </section>
+    <footer>Aluno: Julio C. S. Junior - Des. Sistemas SENAI - São José SC - 2024 <br> Lógica de Programação / JavaScript <br> Professor: Ruan Lopes / Wesley Vargas</footer>
+    <script>
+        
+        let mes = document.querySelector('input#mes')
+        let res = document.querySelector('p#resultado')
+
+        function conferir() {
+            let nomeMes = ''
+            if(mes.value >= 1 && mes.value <= 12){
+                switch(Number(mes.value)){
+                    case 1: 
+                        nomeMes = 'Janeiro'
+                        break
+                    case 2: 
+                        nomeMes = 'Fevereiro'
+                        break
+                    case 3: 
+                        nomeMes = 'Março'
+                        break
+                    case 4: 
+                        nomeMes = 'Abril'
+                        break
+                    case 5: 
+                        nomeMes = 'Maio'
+                        break
+                    case 6: 
+                        nomeMes = 'Junho'
+                        break
+                    case 7: 
+                        nomeMes = 'Julho'
+                        break
+                    case 8: 
+                        nomeMes = 'Agosto'
+                        break
+                    case 9: 
+                        nomeMes = 'Setembro'
+                        break
+                    case 10: 
+                        nomeMes = 'Outubro'
+                        break
+                    case 11: 
+                        nomeMes = 'Novembro'
+                        break
+                    case 12: 
+                        nomeMes = 'Dezembro'
+                        break
+                    default: 'Mês invalido!'
+                }
+                
+                res.innerHTML = `O numero <strong>${mes.value}</strong> corresponde ao mês de <strong>${nomeMes}</strong>`
+                mes.value = ''
+                mes.focus()
+            } else {
+                res.innerHTML = ''
+                window.alert('[ERRO!] Infome um valor entre 1 e 12...')
+            }
+        }
+    </script>
+</body>
+</html>
